@@ -1,13 +1,14 @@
 import { Grid, Typography, Button } from "@material-ui/core";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Image from "../Images/logo.png";
+import Image from "../Images/circularlogo.png";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import IconButton from "@material-ui/core/IconButton";
+import Paper from '@material-ui/core/Paper';
 import Banner from "../Images/banner.png";
 import Bushes from "../Images/bushes.png";
 import {
@@ -22,47 +23,51 @@ import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.primary.main,
-    //backgroundImage:`url(https://blush.design/api/download?shareUri=MZ4xc09UA&s=0.1%7EB28B67-0.2%7EB28B67-0.3%7ED4A181&w=800&h=800&fm=png)`,
+    backgroundColor: "#ffb300",
+    backgroundImage:`url(https://blush.design/api/download?shareUri=onCMW0enjv&s=0.1%7EEAC7A8-0.2%7EEAC7A8-0.3%7EB28B67&w=800&h=800&fm=png)`,
     //background: `url(${Banner}) center/cover`,
+    backgroundPosition:'center',
     backgroundRepeat: `no-repeat`,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     height: "80vh",
-    gap: 8,
+    gap: 16,
     color: theme.palette.text.primary
   },
   logo: {
     height: "10em",
     width: "10em",
-    // right:0,
-    // top:300,
-    resize: "both"
+    resize: "both",
+    marginTop:8,
   },
   tag: {
-    //  right:40,
-    // top:480,
-    marginBottom: 16
+    position:'absolute',
+    right:20,
+    bottom:110,
+    // marginBottom: 16,
+    // marginTop: 16,
+    fontWeight:"900",
+    padding:'1em',
+    opacity:'0.9'
   },
   cta: {
-    marginBottom: 8
+    marginBottom: 136
   },
   social: {
-    display: "flex"
+    display: "flex",
+    alignSelf:'flex-end'
   },
   link: {
     textDecoration: "none",
     color: "inherit",
     unset: "all"
   },
-  // bushes: {
-  //   position: "absolute",
-  //   width: 400,
-  //   bottom: 30,
-  //   zIndex: 0
-  // }
+  icon:{
+    color:"white",
+  }
+ 
 }));
 
 const TopPanel = (props) => {
@@ -77,9 +82,11 @@ const TopPanel = (props) => {
         width="100vw"
         height="100vw"
       />
-      <Typography className={classes.tag} variant="h4">
+      <Paper variant="outlined" className={classes.tag}>
+      <Typography  variant="h6">
         Intelligence the World Needs
       </Typography>
+      </Paper>
       <Button
         variant="contained"
         onClick={() => window.open(Telegram, "_blank")}
@@ -98,7 +105,8 @@ const TopPanel = (props) => {
           onClick={() => window.open(LinkedIn, "_blank")}
         >
           <LinkedInIcon
-            color="action"
+            
+            className={classes.icon}
             
           />
         </IconButton>
@@ -110,7 +118,8 @@ const TopPanel = (props) => {
           onClick={() => window.open(Twitter, "_blank")}
         >
           <TwitterIcon
-            color="action"
+            
+            className={classes.icon}
             
           />
         </IconButton>
@@ -122,7 +131,8 @@ const TopPanel = (props) => {
           onClick={() => window.open(Instagram, "_blank")}
         >
           <InstagramIcon
-            color="action"
+            
+            className={classes.icon}
             
           />
         </IconButton>
@@ -134,7 +144,8 @@ const TopPanel = (props) => {
           onClick={() => window.open(Facebook, "_blank")}
         >
           <FacebookIcon
-            color="action"
+            
+            className={classes.icon}
             
           />
         </IconButton>
@@ -146,7 +157,8 @@ const TopPanel = (props) => {
           onClick={() => window.open(YouTube, "_blank")}
         >
           <YouTubeIcon
-            color="action"
+            
+            className={classes.icon}
             
           />
         </IconButton>

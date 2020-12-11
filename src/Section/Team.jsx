@@ -7,11 +7,15 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: theme.spacing(2)
   },
+  cards:{
+    [theme.breakpoints.down('md')]:{
+      margin: '0 auto 0 auto',
+    }
+  }
 
 }));
 
 const team= [
-  {name:"ShresthaRupa Dasa", role:"Head"},
   {name:"Chetan", role:"Backend Community Lead & HR"},
   {name:"Aditya Patnaik", role:"WebDev Community Lead"},
   {name:"Prince Keshari", role:"Social Media Community Lead"},
@@ -28,11 +32,11 @@ const Team = (props)=>{
     const classes = useStyles()
     
       return(
-        <Grid item container>
+        <Grid item container >
         <Typography xs={12} className={classes.title} variant="h3">
           Team
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} className={classes.cards}>
           {
             team.map((el,index)=>{
               return(

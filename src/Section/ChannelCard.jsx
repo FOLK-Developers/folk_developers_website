@@ -31,7 +31,7 @@ const ChannelCard = ({ name, url }) => {
   return (
     <Grid item className={classes.item}>
       <Card className={classes.card}>
-        <img src={Image} className={classes.cover} alt="hey" />
+        <img src={require(`../Images/${url}.png`)} className={classes.cover} alt="hey" />
       </Card>
       <Typography className={classes.channelname} variant="h5">{name}</Typography>
     </Grid>

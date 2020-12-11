@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const projects = [
-  {name:"Community DB"},
-  {name:"Music App"},
-  {name:"Publication"},
+  {name:"Community DB", url:"https://robohash.org/abc"},
+  {name:"Music App", url:"https://robohash.org/def"},
+  {name:"Publication", url:"https://robohash.org/ghi"},
 ]
 
 const Projects = (props)=>{
@@ -30,7 +30,7 @@ const Projects = (props)=>{
             projects.map((el,index)=>{
               return(
                 
-                  <ProjectCard key={index} name={el.name}/>
+                  <ProjectCard key={index} name={el.name} url={el.url}/>
               )
             })
           }

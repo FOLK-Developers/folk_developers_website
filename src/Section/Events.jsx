@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const events = [
-  {name:"Bi Weekly Python Sessions"},
-  {name:"Executive Board Meet"},
-  {name:"Developers Sunday"},
+  {name:"Bi Weekly Python Sessions", url:"https://robohash.org/abc"},
+  {name:"Executive Board Meet", url:"https://robohash.org/efg"},
+  {name:"Developers Sunday", url:"https://robohash.org/hij"},
 ]
 
 const Events = (props)=>{
@@ -30,7 +30,7 @@ const Events = (props)=>{
             events.map((el,index)=>{
               return(
                 
-                  <EventCard key={index} name={el.name}/>
+                  <EventCard key={index} name={el.name} url={el.url}/>
               )
             })
           }

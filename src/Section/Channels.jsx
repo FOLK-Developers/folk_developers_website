@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const channels = [
-  { name: "Web Dev", url: "../Images/chan.png" },
-  { name: "Python", url: "" },
-  { name: "DataScience/AI", url: "" },
-  { name: "App Dev", url: "" },
-  { name: "Backend Dev", url: "" }
+  { name: "Web Dev", url: "react" },
+  { name: "Python", url: "python" },
+  { name: "DataScience/AI", url: "tensor" },
+  { name: "App Dev", url: "flutter" },
+  { name: "Backend Dev", url: "backend" }
 ];
 
 const Channels = (props) => {

@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Typography, Card, CardMedia,Paper } from "@material-ui/core";
 import Image from "../Images/chan.png";
 import { makeStyles } from "@material-ui/core/styles";
+import { updateArrayLiteral } from "typescript";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -19,13 +20,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const EventCard = ({ name }) => {
+const EventCard = ({ name,url }) => {
   const classes = useStyles();
 
   return (
     <Grid item>
       <Paper variant={"outlined"} className={classes.card}>
-        <img src={Image} className={classes.cover} alt="hey" />
+        <img src={url} className={classes.cover} alt="hey" />
         <Typography variant="h5">{name}</Typography>
       </Paper>
     </Grid>

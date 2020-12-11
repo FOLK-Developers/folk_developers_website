@@ -19,13 +19,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ProjectCard = ({ name }) => {
+const ProjectCard = ({ name,url }) => {
   const classes = useStyles();
 
   return (
     <Grid item>
       <Paper className={classes.card}>
-        <img src={Image} className={classes.cover} alt="hey" />
+        <img src={url} className={classes.cover} alt="hey" />
         <Typography variant="h5">{name}</Typography>
       </Paper>
     </Grid>
