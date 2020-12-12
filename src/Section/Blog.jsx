@@ -4,10 +4,10 @@ import { Grid } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
+//import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
+//import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 
@@ -54,7 +54,7 @@ const Blog = (props) => {
         console.log(articles, res.data.items);
       })
       .catch((err) => {});
-  }, []);
+  }, [articles]);
 
   return (
     <Grid item container className={classes.root}>

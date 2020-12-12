@@ -1,26 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-//import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import Slide from "@material-ui/core/Slide";
 import { useScrollTrigger } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
-import Box from '@material-ui/core/Box';
+// import Brightness4Icon from "@material-ui/icons/Brightness4";
+// import Box from '@material-ui/core/Box';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import NotificationsIcon from "@material-ui/icons/Notifications";
+//import NotificationsIcon from "@material-ui/icons/Notifications";
 // import useMediaQuery from '@material-ui/core/useMediaQuery';
 // import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 const useStyles = makeStyles((theme) => ({
   root: {
-    // flexGrow: 1,
-    backgroundColor: theme.palette.primary,
+    flexGrow: 1,
+    // backgroundColor: theme.palette.primary,
+    backgroundColor:"#FBD916",
     display:'flex',
     flexDirection:'row',
     justifyContent:'space-between',
@@ -53,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight:`0px`,
     maxWidth:`100px`,
     minWidth:`50px`,
+    fontWeight:`500`,
     [theme.breakpoints.down('md')]:{
       minHeight:'48px'
     },
@@ -94,8 +92,7 @@ const Navbar = ({value, setValue}) => {
      <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="#ffffff"
-          textColor="#ffffff"
+          indicatorColor="secondary"
           variant="scrollable"
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
@@ -120,9 +117,10 @@ const Navbar = ({value, setValue}) => {
           className={classes.menuButton}
           color="inherit"
           aria-label="menu"
+          onClick={() => window.open("https://github.com/FOLK-Developers", "_blank")}
         >
           
-            <GitHubIcon className={classes.icon} onClick={() => window.open("https://github.com/FOLK-Developers", "_blank")} />
+            <GitHubIcon className={classes.icon}  />
         </IconButton>
         {/* <IconButton
           edge="start"

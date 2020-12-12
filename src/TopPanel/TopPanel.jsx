@@ -1,16 +1,17 @@
-import { Grid, Typography, Button } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import  Typography from "@material-ui/core/Typography";
+import  Grid from "@material-ui/core/Grid";
+
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Image from "../Images/circularlogo.png";
+//import Image from "../Images/circularlogo.png";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import IconButton from "@material-ui/core/IconButton";
-import Paper from '@material-ui/core/Paper';
-import Banner from "../Images/banner.png";
-import Bushes from "../Images/bushes.png";
+import One from "../Images/one.png";
 import {
   YouTube,
   Twitter,
@@ -19,22 +20,29 @@ import {
   Instagram,
   Facebook
 } from "../SocialLinks";
-import Link from "@material-ui/core/Link";
+//import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#ffb300",
-    backgroundImage:`url(https://blush.design/api/download?shareUri=onCMW0enjv&s=0.1%7EEAC7A8-0.2%7EEAC7A8-0.3%7EB28B67&w=800&h=800&fm=png)`,
-    //background: `url(${Banner}) center/cover`,
+    backgroundColor: "#FBD916",
+    background:`url(${One}) no-repeat center center`,
+    backgroundSize: `100% 120%`,
     backgroundPosition:'center',
     backgroundRepeat: `no-repeat`,
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     alignItems: "center",
     height: "80vh",
-    gap: 16,
-    color: theme.palette.text.primary
+    gap: 8,
+    color: theme.palette.text.primary,
+    [theme.breakpoints.down('sm')]:{
+      backgroundSize: `800px 500px`,
+    },
+    [theme.breakpoints.down('xs')]:{
+      backgroundSize: `150% 80%`,
+      resize:'both'
+    }
   },
   logo: {
     height: "10em",
@@ -43,21 +51,25 @@ const useStyles = makeStyles((theme) => ({
     marginTop:8,
   },
   tag: {
-    position:'absolute',
-    right:20,
-    bottom:110,
+    // position:'absolute',
+    // right:20,
+    // bottom:110,
     // marginBottom: 16,
     // marginTop: 16,
-    fontWeight:"900",
-    padding:'1em',
-    opacity:'0.9'
+    // padding:'1em',
+    backgroundColor:'#FBD916',
+    marginTop:8,
+    padding:0
   },
   cta: {
-    marginBottom: 136
+    // marginBottom: 10,
+    marginTop: 10,
+    // position: 'sticky'
   },
   social: {
     display: "flex",
-    alignSelf:'flex-end'
+    fontSize:'32'
+    // justifySelf:'end'
   },
   link: {
     textDecoration: "none",
@@ -75,18 +87,14 @@ const TopPanel = (props) => {
 
   return (
     <Grid item className={classes.root}>
-      <img
+      {/* <img
         className={classes.logo}
         src={Image}
         alt="logo"
         width="100vw"
         height="100vw"
-      />
-      <Paper variant="outlined" className={classes.tag}>
-      <Typography  variant="h6">
-        Intelligence the World Needs
-      </Typography>
-      </Paper>
+      /> */}
+      
       <Button
         variant="contained"
         onClick={() => window.open(Telegram, "_blank")}
@@ -96,7 +104,12 @@ const TopPanel = (props) => {
       >
         Join Our Community
       </Button>
-      <div className="social">
+      {/* <Paper variant="outlined" > */}
+      <Typography  variant="h6" className={classes.tag} style={{fontWeight:'600',color:'#D9261C'}}>
+        Intelligence the World Needs
+      </Typography>
+      {/* </Paper> */}
+      <div className="social" style={{alignSelf:'flex-end'}}>
         <IconButton
           edge="start"
           className={classes.menuButton}
@@ -163,6 +176,8 @@ const TopPanel = (props) => {
           />
         </IconButton>
       </div>
+
+
       {/* <img src={Bushes} className={classes.bushes} alt="bush" /> */}
     </Grid>
   );

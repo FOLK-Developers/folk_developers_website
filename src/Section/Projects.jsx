@@ -1,7 +1,7 @@
 // Events and Promotions
 
 import React from 'react'
-import { Grid, Typography, Card, CardMedia,Paper } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ProjectCard from './ProjectCard'
 const useStyles = makeStyles((theme) => ({

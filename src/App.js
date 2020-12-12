@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import Navbar from "./Navbar/Navbar";
 import Grid from "@material-ui/core/Grid";
-import Content from "./Content/Content";
+//import Content from "./Content/Content";
 import { ThemeProvider } from "@material-ui/core/styles/";
 import { theme } from "./Theme/Theme";
 import TopPanel from './TopPanel/TopPanel'
