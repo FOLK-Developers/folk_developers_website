@@ -21,6 +21,8 @@ import Team from "./Section/Team";
 
 //First Commit
 
+//run "serve -s build" to run the project in the production.
+
 const useStyles = makeStyles((theme) => ({
   root: {
     // backgroundColor: theme.palette.background.default,
